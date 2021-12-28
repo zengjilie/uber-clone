@@ -1,5 +1,4 @@
 import {createSlice} from '@reduxjs/toolkit';
-
 const initialState = {
     origin:null,
     destination: null,
@@ -17,7 +16,7 @@ export const navSlice = createSlice({
             state.destination = action.payload;
         },
         setTravelTimeInformation:(state, action) =>{
-            state.travelTimeInformation = action.paylaoad;
+            state.travelTimeInformation = action.payload;
         }
     }
 });

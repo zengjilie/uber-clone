@@ -8,13 +8,13 @@ const data = [
         id:'123',
         icon:'home',
         location:'Home',
-        destination:'Code Street, London, UK',
+        destination:'7205 Hart Ln, Austin, TX, USA',
     },
     {
         id:'456',
         icon:'briefcase',
         location:'Work',
-        destination:'London Eye, London, UK',
+        destination:'Google Austin, West 2nd Street, Austin, TX, USA',
     }
 ];
 
@@ -29,7 +29,12 @@ const NavFavoriates = () => {
                 />
             )}
             renderItem = {({item:{icon,location,destination}}) => (
-                <TouchableOpacity style = {tw`flex-row items-center p-5`}>
+                <TouchableOpacity 
+                    style = {tw`flex-row items-center p-5`}
+                    onPress={()=>{
+
+                    }} 
+                >
                     <Icon
                         style ={tw`mr-4 rounded-full bg-gray-300 p-3`}
                         name = {icon}
@@ -39,7 +44,7 @@ const NavFavoriates = () => {
                     />
                     <View>
                         <Text style = {tw`font-semibold text-lg`}>{location}</Text>
-                        <Text style = {tw`text-gray-500`}>{destination}</Text>
+                        <Text style = {tw`text-gray-500 text-xs`}>{destination}</Text>
                     </View>
                 </TouchableOpacity>
             )}
